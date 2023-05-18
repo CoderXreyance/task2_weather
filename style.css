@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas : 
+  'header header header header header header'
+  'menu main1 main1 main1 main1 right'
+  'menu main2 main2 main2 main2 right'
+  'menu main3 main3 main3 main3 right'
+  'footer footer footer footer footer footer';
+  gap: 10px;
+  grid-template-columns: 100px auto auto auto auto 400px;
+  background-color: black;
+  padding: 10px;
+}
+
+.gridContainer > div {
+    background-color: lightskyblue;
+    /* text-align: center; */
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.header {
+    grid-area : header;
+}
+.header > div {display: inline-block; }
+.search {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    width: 800px;
+    position: relative;
+    left: 200px;
+    background-color: lightslategrey;
+    border-radius: 15px;
+}
+.menu {
+    grid-area : menu;
+    width: 100px;
+}
+.menu > div {
+    padding : 20px;
+    display: block;
+    font-size: small;
+    margin-top: 40px;
+}
+.menu  a {
+    text-decoration: none;
+    color: black;
+}
+.menu  a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+.main1 {
+    grid-area : main1;
+    height: 250px;
+    background-color: red;
+    text-indent: 10px;
+    
+}
+.divMain1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main2 {
+    grid-area : main2;
+    height: 260px;
+}
+.main2 > p {
+    font-size: 20px;
+    display: inline;
+    margin-bottom: 20px;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+.divMain2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.line {
+    border-left: 1px solid black;
+    height: 150px;
+}
+.main3 {
+    grid-area : main3;
+    height: 350px;
+}
+.divMain3 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main3 > p {
+    font-size: 20px;
+    display: inline;
+    margin-bottom: 20px;
+    position: relative;
+    left: 10px;
+}
+.right {
+    grid-area : right;
+    width: 400px;
+}
+.right li {
+    margin-top: 50px;
+}
+.footer {
+    grid-area : footer;
+    padding: 0px;
+}
+
+footer {
+    background-color: #333;
+    opacity: 0.8;
+    color: #fff;
+    padding: 50px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  footer h3 {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  footer p {
+    margin-bottom: 30px;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li i {
+    margin-right: 10px;
+  }
+  
+  footer a {
+    color: #fff;
+  }
+  
+  @media (max-width: 767px) {
+    footer {
+      text-align: center;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
